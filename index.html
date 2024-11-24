@@ -4,48 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,
-    initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link rel="stylesheet" href="./styes.css" />
-    <title>Login-Signup</title>
-
+    <title>Login & Signup</title>
 </head>
 
 <body>
     <div class="container" id="container">
         <div class="form-container register-container">
-            <form action="https://strong-frangollo-094f02.netlify.app/">
-                <h1>Register</h1>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button>Register</button>
-                <span>or use your account</span>
+            <form action="https://strong-frangollo-094f02.netlify.app/" onsubmit="return validateForm()">
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Enter your email address" required>
+                <input type="password" placeholder="Create Password" required>
+                <button type="submit">Sign Up</button>
+                <span>or use your social account</span>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook"></i></a>
                     <a href="#" class="social"><i class="fab fa-google"></i></a>
-                            <a href="#" class="social"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social"><i class="fab fa-github"></i></a>
                 </div>
             </form>
         </div>
         <div class="form-container login-container">
-            <form action="https://strong-frangollo-094f02.netlify.app/">
-                <h1>Login</h1>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+            <form action="https://strong-frangollo-094f02.netlify.app/" onsubmit="return validateForm()">
+                <h1>Welcome Back</h1>
+                <input type="email" placeholder="Enter your email address" required>
+                <input type="password" placeholder="Your Password" required>
                 <div class="content">
                     <div class="checkbox">
                         <input type="checkbox" name="checkbox" id="checkbox">
-                        <label>Remember me</label>
+                        <label for="checkbox">Keep logged in</label>
                     </div>
                     <div class="pass-link">
-                        <a href="#">Forgot password?</a>
+                        <a href="#">Forgot your password?</a>
                     </div>
                 </div>
-                <button>Login</button>
-                <span>or use your account</span>
+                <button type="submit">Log In</button>
+                <span>or use your social account</span>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook"></i></a>
                     <a href="#" class="social"><i class="fab fa-google"></i></a>
@@ -56,23 +54,23 @@
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                    <h1 class="title">Hello <br> friends</h1>
-                    <p>if Yout have an account, login here and have fun</p>
-                    <button class="ghost" id="login">Login
+                    <h1 class="title">Welcome Back!</h1>
+                    <p>If you already have an account, log in to continue.</p>
+                    <button class="ghost" id="login">Log In
                         <i class="lni Ini-arrow-left login"></i>
                     </button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1 class="title">Start yout <br> journy now</h1>
-                    <p>if you don't have an account yet, join us and start your journey.</p>
-                    <button class="ghost" id="register">Register
+                    <h1 class="title">Join Us Today!</h1>
+                    <p>Create an account to start your journey with us.</p>
+                    <button class="ghost" id="register">Sign Up
                         <i class="lni Ini-arrow-right register"></i>
                     </button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="fun.js"></script>
 </body>
-<script src="fun.js"></script>
 
 </html>
